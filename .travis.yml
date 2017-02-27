@@ -5,3 +5,5 @@ python:
 install:
   - "pip install wit"
   - "pip install telepot"
+  # command to run tests
+script: pytest
