@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 from EntityType import EntityType
 
 class PhraseProvider:
@@ -52,6 +54,3 @@ class PhraseProvider:
 		print("\nFrases recomendadas para ti: ")
 		for phrase in phrases:
 			print("\t-> " + phrase)
-
-
-

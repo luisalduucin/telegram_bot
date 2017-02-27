@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 import json
 import ast
 from Entity import Entity
@@ -17,7 +19,7 @@ class ResponseParser(object):
 			EntityType.INTENT.value: self.entities[EntityType.INTENT.value],
 			EntityType.TYPE_OF_PHRASE.value: self.entities[EntityType.TYPE_OF_PHRASE.value],
 			EntityType.NUMBER_OF_PHRASES.value: self.entities[EntityType.NUMBER_OF_PHRASES.value]}
-	
+
 	def rawPrintResponse(self):
 		print(json.dumps(self.resp_dict, sort_keys=True, indent=4, separators=(',', ': ')))
 

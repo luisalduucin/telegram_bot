@@ -1,7 +1,13 @@
+# -*- coding: UTF-8 -*-
+
 import os
 from ResponseParser import ResponseParser
 from PhraseProvider import PhraseProvider
 from wit import Wit
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 def menu(opcion):
 	if opcion == "1":
@@ -12,7 +18,7 @@ def menu(opcion):
 		return {"exit":False}
 	elif opcion == "2":
 		print("\nIngresa la petición: ")
-		jsonResponse = sendMessage(input())
+		jsonResponse = sendMessage(raw_input())
 
 		response = ResponseParser(jsonResponse)
 		response.prettyPrintResponse();
@@ -26,6 +32,7 @@ def sendMessage(messageContent):
 	return client.message(messageContent)
 
 token = os.getenv('WIT_AI_ACCESS_TOKEN', '')
+print(token)
 client = Wit(access_token = token, actions = {})
 
 while True:
@@ -35,7 +42,7 @@ while True:
 	print("\t2 -> Enviar una peticion")
 	print("\t3 -> Salir")
 
-	output = menu(input("\nOpción: "))
+	output = menu(raw_input("\nOpción: "))
 
 	if output["exit"] == True:
 		break
