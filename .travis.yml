@@ -6,4 +6,4 @@ install:
   - "pip install wit"
   - "pip install telepot"
   # command to run tests
-script: python -m py_compile telegram_api/Main.py wit_ai_api/Client.py
+script: python -m compileall -f .
