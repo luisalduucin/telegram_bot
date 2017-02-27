@@ -5,6 +5,5 @@ python:
 install:
   - "pip install wit"
   - "pip install telepot"
-  - "pip install pytest"
   # command to run tests
-script: pytest
+script: python UnitTest.py
