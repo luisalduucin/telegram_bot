@@ -13,7 +13,7 @@ def menu(opcion):
 	elif opcion == "2":
 		print("\nIngresa la petición: ")
 		jsonResponse = sendMessage(input())
-		
+
 		response = ResponseParser(jsonResponse)
 		response.prettyPrintResponse();
 
@@ -25,7 +25,8 @@ def menu(opcion):
 def sendMessage(messageContent):
 	return client.message(messageContent)
 
-client = Wit(access_token="SVXNANBS4NUSYFDW524VSS4DGLCZB2JC", actions={})
+token = os.getenv('WIT_AI_ACCESS_TOKEN', '')
+client = Wit(access_token = token, actions = {})
 
 while True:
 
@@ -38,5 +39,3 @@ while True:
 
 	if output["exit"] == True:
 		break
-
-
