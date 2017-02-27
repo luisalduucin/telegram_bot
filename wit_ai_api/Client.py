@@ -32,7 +32,6 @@ def sendMessage(messageContent):
 	return client.message(messageContent)
 
 token = os.getenv('WIT_AI_ACCESS_TOKEN', '')
-print(token)
 client = Wit(access_token = token, actions = {})
 
 while True:
