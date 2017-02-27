@@ -1,7 +1,7 @@
 import telepot
 from pprint import pprint
 
-bot = telepot.Bot('330139199:AAHz0_U7_SShaJN4Sm1ZGOPUCZgSQ8J_RgA')
+bot = telepot.Bot('')
 print(bot.getMe())
 
 def handle(msg):
