@@ -4,18 +4,20 @@ from EntityType import EntityType
 
 class PhraseProvider:
 
-	def __init__(self, requirements):
-		responseData = requirements.getResponseData();
+	def __init__(self, requirements = None):
 
-		self.quantity = responseData[EntityType.NUMBER_OF_PHRASES.value].getValue();
-		self.typeOf = responseData[EntityType.TYPE_OF_PHRASE.value].getValue()
+		if requirements: 
+			responseData = requirements.getResponseData();
+			self.quantity = responseData[EntityType.NUMBER_OF_PHRASES.value].getValue();
+			self.typeOf = responseData[EntityType.TYPE_OF_PHRASE.value].getValue()
+
 		self.phraseRepository = {
 			"amor": [
-				"Si yo fuese el mar, y tu una roca, haría subir la marea, para besar tu boca.",
-				"Un hombre quiere ser el primer amor de su amada. Una mujer quiere que su amado sea su último amor.",
+				"Si yo fuese el mar, y tu una roca, haria subir la marea, para besar tu boca.",
+				"Un hombre quiere ser el primer amor de su amada. Una mujer quiere que su amado sea su ultimo amor.",
 				"Te quiero no solo por como eres, sino por como soy yo cuando estoy contigo.",
-				"Un día dejé caer una lágrima en el océano. El día que la encuentre será el día que deje de quererte.",
-				"Sabes que estás enamorado cuando no quieres dormir por la noche, porque tu vida real supera a tus sueños."],
+				"Un dia deje caer una lagrima en el océano. El dia que la encuentre sera el dia que deje de quererte.",
+				"Sabes que estas enamorado cuando no quieres dormir por la noche, porque tu vida real supera a tus sueños."],
 			"amistad": [
 				"Un amigo es uno que lo sabe todo de ti y a pesar de ello te quiere.",
 				"La amistad es más difícil y más rara que el amor. Por eso, hay que salvarla como sea.",
@@ -23,9 +25,9 @@ class PhraseProvider:
 				"Los verdaderos amigos se tienen que enfadar de vez en cuando.",
 				"La amistad duplica las alegrías y divide las angustias por la mitad."],
 			"motivacional": [
-				"Sólo una cosa convierte en imposible un sueño: el miedo a fracasar.",
+				"Los dias mas perdidos de tu vida son los que no has sonreido.",
 				"Cuando alguien desea algo debe saber que corre riesgos y por eso la vida vale la pena.",
-				"Los días más perdidos de tu vida son los que no has sonreído.",
+				"Solo una cosa convierte en imposible un sueño: el miedo a fracasar.",
 				"Para que los cambios tengan un valor verdadero deben ser consistentes y duraderos.",
 				"Ponte de frente al sol y las sombras quedarán detrás de ti."],
 			"chistosa": [
@@ -41,6 +43,12 @@ class PhraseProvider:
 				"Hecho, es 10 veces mejor que perfecto.",
 				"Problema=Oprtunidad."]
 		 }
+
+	def setQuantity(self, value):
+		self.quantity = value
+		
+	def setTypeOfPhrase(self, value):
+		self.typeOf = value
 
 	def provide(self):
 		if self.typeOf in list(self.phraseRepository.keys()):
