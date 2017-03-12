@@ -38,3 +38,6 @@ pip-delete-this-directory.txt
 
 # MacOS
 .DS_Store
+
+#IntelliJ
+.idea/

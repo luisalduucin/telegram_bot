@@ -1,9 +1,12 @@
 # -*- coding: UTF-8 -*-
 
-import json
 import ast
-from Entity import Entity
-from EntityType import EntityType
+import json
+
+from .entity_type import EntityType
+
+from un_amigo_bot.helpers.entity import Entity
+
 
 class ResponseParser(object):
 
