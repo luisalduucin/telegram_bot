@@ -1,5 +1,5 @@
 import os
-from example_echo.telegram_bot_impl import TelegramBotImpl
+from example_echo_bot.telegram_bot_impl import TelegramBotImpl
 
 TELEGRAM_ENVIRONMENT_VAR = 'TELEGRAM_ACCESS_TOKEN'
 DEFAULT_VALUE = ''
