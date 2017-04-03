@@ -1,6 +1,6 @@
 from wit_ai_api.wit_ai import WitAi
-from un_amigo_bot.helpers.response_parser import ResponseParser
-from un_amigo_bot.helpers.phrase_provider import PhraseProvider
+from example_un_amigo_bot.helpers.response_parser import ResponseParser
+from example_un_amigo_bot.helpers.phrase_provider import PhraseProvider
 
 DEFAULT_RESPONSE = 'Error en el servicio de Wit.ai'
 user_response = ['NOPE']

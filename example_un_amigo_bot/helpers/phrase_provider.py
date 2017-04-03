@@ -1,4 +1,4 @@
-from un_amigo_bot.helpers.entity_type import EntityType
+from example_un_amigo_bot.helpers.entity_type import EntityType
 
 
 class PhraseProvider:

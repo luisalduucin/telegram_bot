@@ -5,7 +5,7 @@ import json
 
 from .entity_type import EntityType
 
-from un_amigo_bot.helpers.entity import Entity
+from example_un_amigo_bot.helpers.entity import Entity
 
 
 class ResponseParser(object):

@@ -1,5 +1,5 @@
 import os
-from un_amigo_bot.telegram_bot_impl import TelegramBotImpl
+from example_un_amigo_bot.telegram_bot_impl import TelegramBotImpl
 
 TELEGRAM_ENVIRONMENT_VAR = 'TELEGRAM_ACCESS_TOKEN'
 WIT_AI_ENVIRONMENT_VAR = 'WIT_AI_ACCESS_TOKEN'
