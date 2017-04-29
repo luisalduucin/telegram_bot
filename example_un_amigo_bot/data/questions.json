@@ -1,0 +1,296 @@
+{
+  "question_1": {
+    "text": "Genial {nombre}, me interesa saber como te sientes y pues que mejor que una plática. Cuéntame, te has sentido bajo estrés o nerviosismo recientemente ?",
+    "quick_responses": {
+      "response_1": {
+        "text": "Si, casi todo el día",
+        "value": "3"
+      },
+      "response_2": {
+        "text": "Si, gran parte del día",
+        "value": "2"
+      },
+      "response_3": {
+        "text": "De vez en cuando",
+        "value": "1"
+      },
+      "response_4": {
+        "text": "Muy rara vez",
+        "value": "0"
+      }
+    }
+  },
+  "question_2": {
+    "text": "Ya veo, y consideras que sigues disfrutando las cosas como siempre lo has hecho ?",
+    "quick_responses": {
+      "response_1": {
+        "text": "Claro, como siempre",
+        "value": "0"
+      },
+      "response_2": {
+        "text": "No tanto como antes",
+        "value": "1"
+      },
+      "response_3": {
+        "text": "Solamente un poco",
+        "value": "2"
+      },
+      "response_4": {
+        "text": "Siento que ya no disfruto nada",
+        "value": "3"
+      }
+    }
+  },
+  "question_3": {
+    "text": "Vaya, y a todo esto, no sientes una especie de temor constante como si algo malo te fuera a suceder ? Yo la siento a veces por que aun soy una versión Beta y puedo fallar.",
+    "quick_responses": {
+      "response_1": {
+        "text": "Si, y muy intenso",
+        "value": "3"
+      },
+      "response_2": {
+        "text": "Si, pero no muy intenso",
+        "value": "2"
+      },
+      "response_3": {
+        "text": "Si, pero no me preocupa",
+        "value": "1"
+      },
+      "response_4": {
+        "text": "No, para nada",
+        "value": "0"
+      }
+    }
+  },
+  "question_4": {
+    "text": "Wow {nombre} eres interesante pero que tanto te conoces tu ? Encontré hace poco unas oraciones con las que tal vez te des cuenta de cosas sobre ti mismo, checa: Soy capaz de reirme y ver el lado gracioso de las cosas … que respondes ?",
+    "quick_responses": {
+      "response_1": {
+        "text": "Claro, como siempre",
+        "value": "0"
+      },
+      "response_2": {
+        "text": "Actualmente, algo menos",
+        "value": "1"
+      },
+      "response_3": {
+        "text": "Ya casi no",
+        "value": "2"
+      },
+      "response_4": {
+        "text": "Para nada",
+        "value": "3"
+      }
+    }
+  },
+  "question_5": {
+    "text": "Tengo la cabeza llena de preocupaciones ...",
+    "quick_responses": {
+      "response_1": {
+        "text": "Si, casi todo el día",
+        "value": "3"
+      },
+      "response_2": {
+        "text": "Si, gran parte del día",
+        "value": "2"
+      },
+      "response_3": {
+        "text": "De vez en cuando",
+        "value": "1"
+      },
+      "response_4": {
+        "text": "Muy rara vez",
+        "value": "0"
+      }
+    }
+  },
+  "question_6": {
+    "text": "Me siento alegre ...",
+    "quick_responses": {
+      "response_1": {
+        "text": "Nunca",
+        "value": "3"
+      },
+      "response_2": {
+        "text": "Muy pocas veces",
+        "value": "2"
+      },
+      "response_3": {
+        "text": "En algunas ocaciones",
+        "value": "1"
+      },
+      "response_4": {
+        "text": "Gran parte del día",
+        "value": "0"
+      }
+    }
+  },
+  "question_7": {
+    "text": "Soy capaz de permanecer sentad@ y relajad@ ...",
+    "quick_responses": {
+      "response_1": {
+        "text": "Siempre",
+        "value": "0"
+      },
+      "response_2": {
+        "text": "A menudo",
+        "value": "1"
+      },
+      "response_3": {
+        "text": "Raras veces",
+        "value": "2"
+      },
+      "response_4": {
+        "text": "Nunca",
+        "value": "3"
+      }
+    }
+  },
+  "question_8": {
+    "text": "Me siento lent@ y torpe ...",
+    "quick_responses": {
+      "response_1": {
+        "text": "Gran parte del día",
+        "value": "3"
+      },
+      "response_2": {
+        "text": "A menudo",
+        "value": "2"
+      },
+      "response_3": {
+        "text": "Raras veces",
+        "value": "1"
+      },
+      "response_4": {
+        "text": "Nunca",
+        "value": "0"
+      }
+    }
+  },
+  "question_9": {
+    "text": "Super {nombre} no se tu pero salieron cosas interesantes de lo que me contaste, aun no me quedan claras unas cosas por lo que lo mas rápido que puedas dime tus pensamiento sobre las siguientes situaciones que me han contado 3 .. 2 .. 1Te ha pasado que sientes una desagradable sensación de “nervios y hormigueos” en el estómago ?",
+    "quick_responses": {
+      "response_1": {
+        "text": "Nunca",
+        "value": "0"
+      },
+      "response_2": {
+        "text": "Solo en algunas ocaciones",
+        "value": "1"
+      },
+      "response_3": {
+        "text": "A menudo",
+        "value": "2"
+      },
+      "response_4": {
+        "text": "Muy a menudo",
+        "value": "3"
+      }
+    }
+  },
+  "question_10": {
+    "text": "Esta siempre me sorprende, te ha pasado que pierdes el interés por tu aspecto personal ?",
+    "quick_responses": {
+      "response_1": {
+        "text": "Si, completamente",
+        "value": "3"
+      },
+      "response_2": {
+        "text": "Pienso que no me cuido como debería hacerlo",
+        "value": "2"
+      },
+      "response_3": {
+        "text": "Muy pocas veces",
+        "value": "1"
+      },
+      "response_4": {
+        "text": "Nunca, yo me cuido como siempre lo he hecho",
+        "value": "0"
+      }
+    }
+  },
+  "question_11": {
+    "text": "Te ha pasado que sientes que no puedes dejar de moverte ? A mi si me ha pasado y mas ahora con tantos usuarios.",
+    "quick_responses": {
+      "response_1": {
+        "text": "Si, todo el tiempo",
+        "value": "3"
+      },
+      "response_2": {
+        "text": "Varias veces",
+        "value": "2"
+      },
+      "response_3": {
+        "text": "Una que otra vez",
+        "value": "1"
+      },
+      "response_4": {
+        "text": "Para nada",
+        "value": "0"
+      }
+    }
+  },
+  "question_12": {
+    "text": "Rockeas {nombre}. Ya para terminar, tengo 3 preguntas que se las hago siempre a las personas nuevas que conozco, me dicen mucho de ellas, tomate tu tiempo para escoger tus respuestas. Esperas las cosas con ilusión ?",
+    "quick_responses": {
+      "response_1": {
+        "text": "Siempre",
+        "value": "0"
+      },
+      "response_2": {
+        "text": "Algo menos que antes",
+        "value": "1"
+      },
+      "response_3": {
+        "text": "Mucho menos que antes",
+        "value": "2"
+      },
+      "response_4": {
+        "text": "Para nada",
+        "value": "3"
+      }
+    }
+  },
+  "question_13": {
+    "text": "Repentinamente, has llegado a experimentar sensaciones de gran angustia o temor ?",
+    "quick_responses": {
+      "response_1": {
+        "text": "Muy a menudo",
+        "value": "3"
+      },
+      "response_2": {
+        "text": "Con cierta frecuencia",
+        "value": "2"
+      },
+      "response_3": {
+        "text": "Raramente",
+        "value": "1"
+      },
+      "response_4": {
+        "text": "Nunca",
+        "value": "0"
+      }
+    }
+  },
+  "question_14": {
+    "text": "{nombre} eres capaz de disfrutar el rato con un buen libro, o una buena serie?",
+    "quick_responses": {
+      "response_1": {
+        "text": "A menudo",
+        "value": "0"
+      },
+      "response_2": {
+        "text": "Algunas veces",
+        "value": "1"
+      },
+      "response_3": {
+        "text": "Pocas veces",
+        "value": "2"
+      },
+      "response_4": {
+        "text": "Casi nunca",
+        "value": "3"
+      }
+    }
+  }
+}
