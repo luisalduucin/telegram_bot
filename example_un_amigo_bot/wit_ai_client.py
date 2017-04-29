@@ -1,42 +1,70 @@
-from wit_ai_api.wit_ai import WitAi
-from example_un_amigo_bot.helpers.response_parser import ResponseParser
-from example_un_amigo_bot.helpers.phrase_provider import PhraseProvider
+import logging
 
-DEFAULT_RESPONSE = 'Error en el servicio de Wit.ai'
-user_response = ['NOPE']
+logging.basicConfig(level=logging.INFO)
+
+import pprint
+
+from example_un_amigo_bot.helpers.chistes_provider import ChistesProvider
+from wit_ai_api.wit_ai import WitAi
+
+DEFAULT_RESPONSE = b'Error en el servicio de Wit.ai'
+wit_ai_responses = {}
+wit_ai_requests = {}
+user_context = {}
+chistes_provider = ChistesProvider()
 
 
 class WitAiClient(object):
 
-    user_context = {}
-
     def __init__(self, access_token):
-        actions = {'send': WitAiClient.send}
+        actions = {'send': WitAiClient.send, 'chiste': WitAiClient.chiste}
         self.wit_service = WitAi(access_token, actions)
 
     @staticmethod
     def send(request, response):
-        user_response[0] = response.get('text', DEFAULT_RESPONSE)
+        chat_id = request.get('session_id', DEFAULT_RESPONSE)
+        wit_ai_responses[chat_id] = response.get('text', DEFAULT_RESPONSE)
+        wit_ai_requests[chat_id] = request.get('text', DEFAULT_RESPONSE)
+        logging.info('\n\nInside send method:\n\n'
+                     + '-> REQUEST:\n\n' + pprint.pformat(request) + '\n\n'
+                     + '-> RESPONSE:\n\n' + pprint.pformat(response) + '\n\n'
+                     + '-> WIT_AI_RESPONSES:\n\n' + pprint.pformat(wit_ai_responses) + '\n\n')
+
+    @staticmethod
+    def chiste(request):
+        logging.info('\n\nInside chiste method:\n\n'
+                     + '-> REQUEST:\n\n' + pprint.pformat(request)  + '\n\n')
+        context = request['context']
+        context['chiste'] = chistes_provider.provide()
+        return context
+
+    @staticmethod
+    def get_response(chat_id):
+        return wit_ai_responses.get(chat_id, DEFAULT_RESPONSE)
+
+    @staticmethod
+    def get_request(chat_id):
+        return wit_ai_requests[chat_id]
+
+    @staticmethod
+    def __get_intent_value(entities):
+        return entities['intent'][0]['value']
+
+    @staticmethod
+    def __get_entitie_value(entitie_name, entities):
+        return entities[entitie_name][0]['value']
 
     def talk(self, chat_id, msg):
-        if chat_id not in self.user_context:
-            self.user_context[chat_id] = {}
+        if chat_id not in user_context:
+            user_context[chat_id] = {}
 
         entities = self.wit_service.get_entities(msg)
-        print(entities)
 
-        if 'intent' in entities:
-            if entities['intent'][0]['value'] == 'recomendar_frase':
-                response = ResponseParser(self.wit_service.analyze(msg))
-                response.prettyPrintResponse()
-                self.user_context[chat_id]['frases'] = str(PhraseProvider(response).provide())
+        if 'nombre' in entities:
+            user_context[chat_id]['nombre'] = WitAiClient.__get_entitie_value('nombre', entities)
 
-        if 'tipo_dia' in entities:
-            self.user_context[chat_id]['tipo_dia'] = entities['tipo_dia'][0]['value']
-            provider = PhraseProvider()
-            provider.set_quantity(1)
-            provider.set_type_of_phrase('motivacional')
-            self.user_context[chat_id]['frases'] = str(provider.provide())
+        logging.info('\n\nInside talk method:\n\n'
+                     + '-> Entities:\n\n' + pprint.pformat(entities) + '\n\n'
+                     + '-> Context:\n\n' + pprint.pformat(user_context[chat_id]) + '\n\n')
 
-        print("Context: " + str(self.user_context[chat_id]))
-        return self.wit_service.talk(chat_id, msg, self.user_context[chat_id])
+        return self.wit_service.talk(chat_id, msg, {})

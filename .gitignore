@@ -41,3 +41,6 @@ pip-delete-this-directory.txt
 
 #IntelliJ
 .idea/
+
+#IntelliJ
+*.log
