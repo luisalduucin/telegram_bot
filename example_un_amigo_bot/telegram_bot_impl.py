@@ -6,6 +6,10 @@ from example_un_amigo_bot.helpers.questions_provider import QuestionsProvider
 from telegram_api.telegram_bot import TelegramBot
 from .wit_ai_client import WitAiClient
 
+SELF_DESCRIPTION_TAG = 'SELF_DESCRIPTION'
+
+DEPRESSION_SCORE_TAG = 'DEPRESSION_SCORE'
+
 START_QUESTIONARY_SIGNAL = 'me gustaría conocerte, como te describes a ti mismo?'
 
 
@@ -63,17 +67,17 @@ class TelegramBotImpl(TelegramBot):
     def save_self_description(self, chat_id, description):
         if chat_id not in self.depression_profile:
             self.depression_profile[chat_id] = {}
-        self.depression_profile['SELF_DESCRIPTION'] = description
+        self.depression_profile[chat_id][SELF_DESCRIPTION_TAG] = description
     
     def update_depression_score(self, chat_id, response):
-        question_index = self.current_question_index[chat_id]
-        question = self.questions_repository.provide(question_index)
+        previous_question_index = self.current_question_index[chat_id] - 1
+        question = self.questions_repository.provide(previous_question_index)
         button_value = self.custom_keyboard_repository.get_button_value(question, response)
         if chat_id not in self.depression_profile:
             self.depression_profile[chat_id] = {}
-            if 'DEPRESSION_SCORE' not in self.depression_profile[chat_id]:
-                self.depression_profile['DEPRESSION_SCORE'] = 0
-        self.depression_profile['DEPRESSION_SCORE'] += button_value
+        if DEPRESSION_SCORE_TAG not in self.depression_profile[chat_id]:
+            self.depression_profile[chat_id][DEPRESSION_SCORE_TAG] = 0
+        self.depression_profile[chat_id][DEPRESSION_SCORE_TAG] += int(button_value)
 
     def send_statistics(self):
         logging.info('\n\nUsers Statistics:\n\n'
