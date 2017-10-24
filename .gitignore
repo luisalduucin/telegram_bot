@@ -44,3 +44,7 @@ pip-delete-this-directory.txt
 
 #IntelliJ
 *.log
+
+#Config files
+config.local.json
+
