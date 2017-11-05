@@ -9,8 +9,18 @@ from .wit_ai_client import WitAiClient
 SELF_DESCRIPTION_TAG = 'SELF_DESCRIPTION'
 
 DEPRESSION_SCORE_TAG = 'DEPRESSION_SCORE'
+DEPRESSION_CLASSIFICATION_TAG = 'DEPRESSION_CLASSIFICATION'
 
 START_QUESTIONARY_SIGNAL = 'me gustaría conocerte, como te describes a ti mismo?'
+
+
+def calculate_depression_class(depression_score):
+    if 0 <= depression_score <= 17:
+        return 'No depresion'
+    elif 18 <= depression_score <= 22:
+        return 'Depresion moderada'
+    else:
+        return 'Depresion establecida'
 
 
 class TelegramBotImpl(TelegramBot):
@@ -78,6 +88,8 @@ class TelegramBotImpl(TelegramBot):
         if DEPRESSION_SCORE_TAG not in self.depression_profile[chat_id]:
             self.depression_profile[chat_id][DEPRESSION_SCORE_TAG] = 0
         self.depression_profile[chat_id][DEPRESSION_SCORE_TAG] += int(button_value)
+        depression_score = self.depression_profile[chat_id][DEPRESSION_SCORE_TAG]
+        self.depression_profile[chat_id][DEPRESSION_CLASSIFICATION_TAG] = calculate_depression_class(depression_score)    
 
     def send_statistics(self):
         logging.info('\n\nUsers Statistics:\n\n'
