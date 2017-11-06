@@ -4,7 +4,7 @@ logging.basicConfig(level=logging.INFO)
 
 import pprint
 
-from example_un_amigo_bot.helpers.jokes_provider import JokesProvider
+from example_un_amigo_bot.providers.jokes_provider import JokesProvider
 from wit_ai_api.wit_ai import WitAi
 
 DEFAULT_RESPONSE = b'Error en el servicio de Wit.ai'

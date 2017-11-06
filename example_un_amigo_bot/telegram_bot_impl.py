@@ -1,8 +1,8 @@
 import logging
 import pprint
 
-from example_un_amigo_bot.helpers.custom_keyboard_provider import CustomKeyboardProvider
-from example_un_amigo_bot.helpers.questions_provider import QuestionsProvider
+from example_un_amigo_bot.providers.custom_keyboard_provider import CustomKeyboardProvider
+from example_un_amigo_bot.providers.questions_provider import QuestionsProvider
 from telegram_api.telegram_bot import TelegramBot
 from .wit_ai_client import WitAiClient
 
