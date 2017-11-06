@@ -4,14 +4,14 @@ logging.basicConfig(level=logging.INFO)
 
 import pprint
 
-from example_un_amigo_bot.helpers.chistes_provider import ChistesProvider
+from example_un_amigo_bot.helpers.jokes_provider import JokesProvider
 from wit_ai_api.wit_ai import WitAi
 
 DEFAULT_RESPONSE = b'Error en el servicio de Wit.ai'
 wit_ai_responses = {}
 wit_ai_requests = {}
 user_context = {}
-chistes_provider = ChistesProvider()
+jokes_provider = JokesProvider()
 
 
 class WitAiClient(object):
@@ -35,7 +35,7 @@ class WitAiClient(object):
         logging.info('\n\nInside chiste method:\n\n'
                      + '-> REQUEST:\n\n' + pprint.pformat(request)  + '\n\n')
         context = request['context']
-        context['chiste'] = chistes_provider.provide()
+        context['chiste'] = jokes_provider.provide()
         return context
 
     @staticmethod
