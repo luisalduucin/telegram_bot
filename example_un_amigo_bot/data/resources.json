@@ -1,0 +1,47 @@
+{
+  "resources": [
+    {
+      "title": "Somos optimistas por naturaleza",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=SRxxh3jGF7c"
+    },
+    {
+      "title": "Inteligencia emocional - Optimismo",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=j4v58FqP2QY"
+    },
+    {
+      "title": "Eduardo Punset, experto en felicidad",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=qiCI0wA5ORg"
+    },
+    {
+      "title": "Claves para enfrentarse al mundo hoy",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=PJM3NAf5oyM"
+    },
+    {
+      "title": "Viaje al optimismo",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=uRfA4mZyCZg"
+    },
+    {
+      "title": "Aprendiendo A Ser Felices - Martin Seligman",
+      "description": "Video Completo: https://www.youtube.com/watch?v=2kDfJRrRRw8&t=3s",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=KGwLGCqJN2o"
+    },
+    {
+      "title": "Aprendiendo A Ser Felices - Redes",
+      "description": "Video Completo: https://www.youtube.com/watch?v=ndnP1ywoD98",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=7L6530Av-MM"
+    },
+    {
+      "title": "Dar Para Ser Felices",
+      "description": "Video Completo: https://www.youtube.com/watch?v=pqRUx3s9KGU",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=Krn39cGNwmA"
+    }
+  ]
+}
