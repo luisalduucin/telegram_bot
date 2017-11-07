@@ -17,6 +17,9 @@ class TelegramBot(object):
     def send_with_custom_keyboard(self, chat_id, msg, custom_keyboard):
         self.bot.sendMessage(chat_id, msg, reply_markup=ReplyKeyboardMarkup(keyboard=[custom_keyboard]))
 
+    def send_and_clear_custom_keyboard(self, chat_id, msg):
+        self.bot.sendMessage(chat_id, msg, reply_markup={'hide_keyboard': True})
+
     @staticmethod
     def glance(msg):
         return telepot.glance(msg)

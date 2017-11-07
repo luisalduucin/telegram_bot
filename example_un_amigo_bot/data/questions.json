@@ -1,6 +1,6 @@
 {
   "question_1": {
-    "text": "Genial {nombre}, me interesa saber como te sientes y pues que mejor que una plática. Cuéntame, te has sentido bajo estrés o nerviosismo recientemente ?",
+    "text": "Genial , me interesa saber como te sientes y pues que mejor que una plática. Cuéntame, te has sentido bajo estrés o nerviosismo recientemente ?",
     "quick_responses": {
       "response_1": {
         "text": "Si, casi todo el día",
@@ -63,7 +63,7 @@
     }
   },
   "question_4": {
-    "text": "Wow {nombre} eres interesante pero que tanto te conoces tu ? Encontré hace poco unas oraciones con las que tal vez te des cuenta de cosas sobre ti mismo, checa: Soy capaz de reirme y ver el lado gracioso de las cosas … que respondes ?",
+    "text": "Wow  eres interesante pero que tanto te conoces tu ? Encontré hace poco unas oraciones con las que tal vez te des cuenta de cosas sobre ti mismo, checa: Soy capaz de reirme y ver el lado gracioso de las cosas … que respondes ?",
     "quick_responses": {
       "response_1": {
         "text": "Claro, como siempre",
@@ -168,7 +168,7 @@
     }
   },
   "question_9": {
-    "text": "Super {nombre} no se tu pero salieron cosas interesantes de lo que me contaste, aun no me quedan claras unas cosas por lo que lo mas rápido que puedas dime tus pensamiento sobre las siguientes situaciones que me han contado 3 .. 2 .. 1Te ha pasado que sientes una desagradable sensación de “nervios y hormigueos” en el estómago ?",
+    "text": "Super  no se tu pero salieron cosas interesantes de lo que me contaste, aun no me quedan claras unas cosas por lo que lo mas rápido que puedas dime tus pensamiento sobre las siguientes situaciones que me han contado 3 .. 2 .. 1Te ha pasado que sientes una desagradable sensación de “nervios y hormigueos” en el estómago ?",
     "quick_responses": {
       "response_1": {
         "text": "Nunca",
@@ -231,7 +231,7 @@
     }
   },
   "question_12": {
-    "text": "Rockeas {nombre}. Ya para terminar, tengo 3 preguntas que se las hago siempre a las personas nuevas que conozco, me dicen mucho de ellas, tomate tu tiempo para escoger tus respuestas. Esperas las cosas con ilusión ?",
+    "text": "Rockeas . Ya para terminar, tengo 3 preguntas que se las hago siempre a las personas nuevas que conozco, me dicen mucho de ellas, tomate tu tiempo para escoger tus respuestas. Esperas las cosas con ilusión ?",
     "quick_responses": {
       "response_1": {
         "text": "Siempre",
@@ -273,7 +273,7 @@
     }
   },
   "question_14": {
-    "text": "{nombre} eres capaz de disfrutar el rato con un buen libro, o una buena serie?",
+    "text": "Eres capaz de disfrutar el rato con un buen libro, o una buena serie?",
     "quick_responses": {
       "response_1": {
         "text": "A menudo",
