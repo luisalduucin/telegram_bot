@@ -1,8 +1,6 @@
-# Telegram Bot 
+# Un Amigo Bot 
 
 [![Build Status](https://travis-ci.org/luisalduucin/telegram_bot.svg?branch=master)](https://travis-ci.org/luisalduucin/telegram_bot)
-
-### Un Amigo Bot
 
 **Un amigo bot** is a conversational bot. The natural language processing part is handled by [wit.ai](https://wit.ai/). **Wit.ai** makes it easy for developers to build applications and devices that you can talk or text to.
 
